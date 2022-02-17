@@ -1,0 +1,51 @@
+/* Parallax*/
+$parallax-height: 100vh;
+$parallax-descripcion-color:#2e3738;
+$font-family-parallax:'Bebas Neue', cursive;
+$font-family-parallax-color:#ED0C88;
+$font-family-parallax-shadow:#000000;
+
+/*Nav*/
+$background-nav:linear-gradient(to right, #b78ef3, #faafe7);
+$font-color-nav:#fff;
+/*Descrpción*/
+$font-family-description:'Source Code Pro', monospace;
+$font-family-nav:'Inconsolata', monospace;
+
+/*Formacion*/
+$font-color-formacion: lighten(#fd5eb6f6,15%);
+$formation-color-header:rgb(255,255,255);
+$font-family-formation:"Nova Flat";
+$background-color-formation:rgb(81,81,255);
+$color-shadow-formación:rgb(0,0,0);
+$color-background-tarjetas: linear-gradient(rgb(255,128,255), rgb(0,255,255));
+$background-color-info:rgb(255,168,255);
+$border-color-info:rgb(128,0,255);
+
+/* Main variables */
+$main-background: rgba(255, 255, 255, 0.342);
+$main-border-radius: 10px;
+$main-border: 1px solid rgba(255, 255, 255, 0.4);
+$main-filter: blur(5px);
+
+$scrollbar-color-start: #2c77a8;
+$scrollbar-color-end: lighten($scrollbar-color-start, 40%);
+$scrollbar-width: 8px;
+$scrollbar-border-radius: 4px;
+$scrollbar-border: 1px solid darken($scrollbar-color-start, 10%);
+
+/*Proyectos*/
+$first-project-color:#F74FAC;
+$second-project-color:#D20FD6;
+$three-project-color:#B39AEB;
+$ford-proyect-color:#772AD4;
+$five-proyect-color:#8266FA;
+$six-proyect-color: linear-gradient(to right,#F74FAC, #D20FD6);
+$font-family-project-tittle:'Oswald', sans-serif;
+$font-family-project-text:'Roboto Mono', monospace;
+
+/*Scrollbar*/
+$scrollbar-color-start:rgb(232, 187, 250);
+$scrollbar-color-end:rgb(141, 101, 136);
+$scrollbar-color-end-principal:pink;
+$scrollbar-color-start-principal:rgb(226, 171, 180);

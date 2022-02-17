@@ -1,0 +1,537 @@
+@import 'mixin';
+@import 'variabless';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  color: $parallax-descripcion-color;
+
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $scrollbar-color-end-principal;
+    border-radius: $scrollbar-border-radius;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: $scrollbar-border;
+    border-radius: $scrollbar-border-radius;
+    border-left: 0;
+    border-right: 0;
+    background-color: $scrollbar-color-start-principal;
+  }
+}
+.nav{
+  text-align: center;
+  background-image: $background-nav;
+  padding: 2px;
+  ul{
+    li{
+      list-style-type: none;
+      display: inline-block;
+      transition: .2s;
+      
+      &:not(:last-child){
+        margin-right: 3rem;
+      }
+      
+      &:hover{
+        transform: scale(1.1);
+        box-shadow: 4px 4px 4px 4px rgba(rgb(131, 6, 120), 0.5);
+      }
+      }
+    }
+  
+  &_link{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    color:$font-color-nav;
+    transition: .2s;
+    font-family: $font-family-nav;
+  }
+  
+  &_link:hover{
+    text-decoration: none;
+  }
+}
+
+
+.titulo {
+  @include parallax-background("https://media1.giphy.com/media/Xx1KwaTNBliH6/giphy.gif?cid=ecf05e47dorzb7gjxfbmozc8bt4wo4894gfi0h7tizk1gtel&rid=giphy.gif&ct=g");
+  width: 100%;
+  height: 100vh;
+  perspective: 1px;
+  transform: translateZ(-1px);
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  h1{
+    text-transform: uppercase;
+    font-family: $font-family-parallax;
+    letter-spacing: 10px;
+    font-size: 220px;
+    color: $font-family-parallax-color;
+    text-align: center;
+    transform: translateZ(-2px);
+    text-shadow: 4px 4px $font-family-parallax-shadow;
+    }
+    
+}
+
+.descripcion{
+    img{
+        width: 400px;
+        position: relative;
+        float: left;
+        margin-bottom: 15px;
+        margin-left: 100px;
+    }
+    p {
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 1.4;
+        font-family: $font-family-description;
+        animation-duration: 3s;
+        animation-name: slidein;
+    }
+    @keyframes slidein {
+      from {
+        margin-left: 100%;
+        width: 300%
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+    }
+}
+
+.formacion {
+    @include parallax-background("https://media4.giphy.com/media/l3vRmn9fXmoslrsDC/giphy.gif?cid=ecf05e47txwslv0468yrvkp6yho6tk3g1odlfym2g1gqghkh&rid=giphy.gif&ct=g");
+    width: 100%;
+    height: 200vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    h1{
+      text-transform: uppercase;
+        font-family: $font-family-parallax;
+        letter-spacing: 30px;
+        font-size: 100px;
+        color: $font-family-parallax-color;
+        text-align: center;
+      transform: translateZ(-2px);
+      text-shadow: 4px 4px $font-family-parallax-shadow;
+  }
+
+  .tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px;
+
+    .header{
+        border-radius: 13px ;
+        background-color: $background-color-formation;
+        padding: 11px;
+        text-align: center;
+        color: $formation-color-header;
+        font-family: $font-family-formation;
+        text-shadow: -1px 0 $color-shadow-formación, 0 1px $color-shadow-formación, 1px 0 $color-shadow-formación, 0 -1px $color-shadow-formación;
+        text-shadow: 2px 2px $color-shadow-formación;
+
+        }
+
+    .layout {
+        width: 300px;
+        padding: 0px 20px 20px 20px;
+        margin: 5px;
+        background:$color-background-tarjetas;
+        box-shadow: 10px 10px 30px $color-shadow-formación;
+        border-radius: 13px;
+
+    }
+
+    .list-item {
+        list-style: none;
+    }
+
+    img {
+        width: 300px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        border-radius: 13px;
+    }
+
+    .border {
+        border-style: solid;
+        border-width: 1px;
+        border-color: $color-shadow-formación;
+    }
+
+    .info {
+        padding: 0px 15px 0px 15px;
+        width: 300px;
+        box-sizing: border-box;
+        background-color: $background-color-info;
+        font-family: $font-family-formation;
+        border-color: $border-color-info;
+        border-radius: 13px;
+        img{
+            width: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+    }
+}
+  }
+
+.proyectos{
+    @include parallax-background("https://media1.giphy.com/media/JCwpJ463XondnALQVo/giphy.gif?cid=ecf05e47rg86h7qjplvbj875d1i4euhynhx8pse09575a328&rid=giphy.gif&ct=g");
+    width: 100%;
+    height: 200vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+    h1{
+        text-transform: uppercase;
+          font-family: $font-family-parallax;
+          letter-spacing: 30px;
+          font-size: 100px;
+          color: $font-family-parallax-color;
+          text-align: center;
+        transform: translateZ(-2px);
+        text-shadow: 4px 4px $font-family-parallax-shadow;
+    }
+    &::-webkit-scrollbar {
+      width: $scrollbar-width;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: $scrollbar-color-end;
+      border-radius: $scrollbar-border-radius;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      border: $scrollbar-border;
+      border-radius: $scrollbar-border-radius;
+      border-left: 0;
+      border-right: 0;
+      background-color: $scrollbar-color-start;
+    }
+  
+    .timeline {
+      margin: auto;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      margin-bottom: 50px;
+
+      &-item {
+        background-color: transparent;
+        margin-bottom: 40px;
+        position: relative;
+
+        &:nth-child(odd) {
+          text-align: right;
+          @include calc(padding-right, '50% + 30px');
+        }
+
+        &:nth-child(even) {
+          text-align: left;
+          @include calc(padding-left, '50% + 30px');
+        }
+
+        &-content {
+          background-image: $six-proyect-color;
+          padding: 10px;
+          border-radius: 8px;
+          border: 1px solid lighten(#000000, 25%);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+
+
+
+          h3 {
+            color: #fff;
+            font-size: 50px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            font-family: $font-family-project-tittle;
+            text-shadow: 4px 4px #000000;
+            margin: 0;
+            padding: 0;
+          }
+
+          p {
+            font-size: 14px;
+            font-weight: normal;
+            color: #fff;
+            font-family: $font-family-project-text;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 2px;
+          }
+          .imgpaax{
+            width: 350px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+          }
+          .btnpaax{
+            width: 40px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            position: absolute;
+            top: 50px;
+          }
+          .timelinecontainer{
+            display: flex;
+            gap: 10px;
+          }
+          .timelinecontainerdos{
+            display: flex;
+            gap: 10px;
+          }
+          .imgmayvan{
+            width: 120px;
+          }
+          .imgalert{
+            width: 300px;
+          }
+        }
+
+        &-dot {
+          height: 16px;
+          width: 16px;
+          border-radius: 50%;
+          background-color: darken(#264c79, 5%);
+          position: absolute;
+          top: 6px;
+          @include calc(left, '50% - 8px');
+        }
+
+        &-date {
+          font-size: 16px;
+          color: lighten(#000000, 15%);
+          font-weight: bold;
+          margin: 6px 0 4px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        @media (max-width: 760px) {
+          margin-bottom: 20px;
+          &:nth-child(odd) {
+            padding-right: 0;
+            text-align: left;
+          }
+          &:nth-child(odd),
+          &:nth-child(even) {
+            padding-left: 35px;
+          }
+          &-dot {
+            left: 0;
+          }
+          @media (max-width: 440px) {
+            &:nth-child(odd),
+            &:nth-child(even) {
+              padding-left: 0;
+            }
+            &-dot {
+              display: none;
+            }
+          }
+        }
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background-color: darken(#264c79, 5%);
+        @include calc(left, '50% - 1px');
+
+        @media (max-width: 760px) {
+          left: 7px;
+
+          @media (max-width: 440px) {
+            display: none;
+          }
+        }
+      }
+    }
+}
+
+.diplomas{
+  @include parallax-background("https://media0.giphy.com/media/3ohzdUGwaysUzYgRKE/giphy.gif?cid=ecf05e470rmlpdw9noycp2jll9eovejj7el65eia2rltp4a3&rid=giphy.gif&ct=g");
+  width: 100%;
+    height: 200vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform: translateZ(-1px);
+  h1{
+      text-transform: uppercase;
+        font-family: $font-family-parallax;
+        letter-spacing: 30px;
+        font-size: 100px;
+        color: $font-family-parallax-color;
+        text-align: center;
+      transform: translateZ(-1px);
+      text-shadow: 4px 4px $font-family-parallax-shadow;
+  }
+  .imagenes{
+    display: grid;
+    margin: 10px;
+    margin-left: 30px;
+    margin-right: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
+    grid-template-rows: 1fr;
+    grid-gap: 1em;
+    grid-auto-flow: dense;
+    cursor: pointer;
+    figure{
+      display: flex;
+      margin: 0;
+    }
+    img{
+      flex: 1;
+      max-width: 100%;
+      object-fit: cover;
+      transform: scale(1);
+      transition: 200ms transform ease-in-out;
+    }
+    .uno:hover{
+      @include galery(1.5);
+    }
+    .dos:hover{
+      @include galery(1.5);
+    }
+    .tres:hover{
+      @include galery(1.5);
+    }
+    .cuatro:hover{
+      @include galery(1.5);
+    }
+    .cinco:hover{
+      @include galery(1.5);
+    }
+    .seis:hover{
+      @include galery(1.5);
+    }
+    .siete:hover{
+      @include galery(1.5);
+    }
+    .ocho:hover{
+      @include galery(1.5);
+    }
+  }
+}
+.contacto{
+    @include parallax-background("https://media1.giphy.com/media/5zheTUHRhWkiKylaZ9/giphy.gif?cid=ecf05e478hty8iqq5oo29rb1dmmiwbb95tna966lpq080270&rid=giphy.gif&ct=g");
+    width: 100%;
+    height: 100vh;
+    perspective: 1px;
+    transform: translateZ(-1px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    h1{
+        text-transform: uppercase;
+          font-family: $font-family-parallax;
+          letter-spacing: 30px;
+          font-size: 290px;
+          color: $font-family-parallax-color;
+          text-align: center;
+        transform: translateZ(-1px);
+        text-shadow: 4px 4px $font-family-parallax-shadow;
+    }
+    &::-webkit-scrollbar {
+      width: $scrollbar-width;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: $scrollbar-color-end;
+      border-radius: $scrollbar-border-radius;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      border: $scrollbar-border;
+      border-radius: $scrollbar-border-radius;
+      border-left: 0;
+      border-right: 0;
+      background-color: $scrollbar-color-start;
+    }
+.socialm{
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+.contgit{
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 0;
+    margin-left: 20px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 4px 4px #000000;
+}
+#link{
+  width: 300px
+}
+}
+
+.personalinfo{
+    @include parallax-background("https://media3.giphy.com/media/KxbHmvL3MGcctzlfdX/giphy.gif?cid=ecf05e47t7t054uxovj6sivmtl6ovhe1yho00xz899urnt5v&rid=giphy.gif&ct=g");
+    width: 100%;
+    height: 100vh;
+    perspective: 1px;
+    transform: translateZ(-1px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    h1{
+        text-transform: uppercase;
+          font-family: $font-family-parallax;
+          letter-spacing: 30px;
+          font-size: 290px;
+          color: $font-family-parallax-color;
+          text-align: center;
+        transform: translateZ(-2px);
+        text-shadow: 4px 4px $font-family-parallax-shadow;
+    }
+    .spotify{
+        width: 60%;
+        margin-left: 250px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    &::-webkit-scrollbar {
+      width: $scrollbar-width;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: $scrollbar-color-end;
+      border-radius: $scrollbar-border-radius;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      border: $scrollbar-border;
+      border-radius: $scrollbar-border-radius;
+      border-left: 0;
+      border-right: 0;
+      background-color: $scrollbar-color-start;
+    }
+}
