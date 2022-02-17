@@ -30,7 +30,10 @@ body {
 .nav {
   text-align: center;
   background-image: linear-gradient(to right, #b78ef3, #faafe7);
-  padding: 2px; }
+  padding: 2px;
+  z-index: 2;
+  position: fixed;
+  width: 100%; }
   .nav ul li {
     list-style-type: none;
     display: inline-block;

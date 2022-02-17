@@ -29,6 +29,9 @@ body {
   text-align: center;
   background-image: $background-nav;
   padding: 2px;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
   ul{
     li{
       list-style-type: none;
