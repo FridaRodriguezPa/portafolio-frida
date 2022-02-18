@@ -1,5 +1,18 @@
 @import 'mixin';
 @import 'variabless';
+*{
+  @media screen and (max-width: 480px){
+html{
+  font-size: 50px;
+  }
+  img{
+    width: 200px;
+  }
+  h1{
+    font-size: 40px;
+  }
+}
+}
 
 html,
 body {
@@ -24,6 +37,8 @@ body {
     border-right: 0;
     background-color: $scrollbar-color-start-principal;
   }
+  
+
 }
 .nav{
   text-align: center;
@@ -61,6 +76,12 @@ body {
   &_link:hover{
     text-decoration: none;
   }
+  @media screen and (max-width: 480px){
+    a li{
+      font-size: 20px;
+      justify-content: center;
+    }
+  }
 }
 
 
@@ -83,6 +104,11 @@ body {
     transform: translateZ(-2px);
     text-shadow: 4px 4px $font-family-parallax-shadow;
     }
+    @media screen and (max-width: 480px){
+        h1{
+          font-size: 100px;
+        }
+      } 
     
 }
 
@@ -116,6 +142,17 @@ body {
         width: 100%;
       }
     }
+    @media screen and (max-width: 480px){
+        img{
+          width: 300px;
+          align-items: center;
+          left: 0px;
+        }
+        P{
+          font-size: 15px;
+          margin: 10px
+        }
+      }
 }
 
 .formacion {
@@ -140,6 +177,17 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 30px;
+    padding: 20px;
+    align-items: center;
+    
+    &::before{
+      @media (max-width:1000px) {
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        margin-left: 0;
+      }
+    }
 
     .header{
         border-radius: 13px ;
@@ -196,6 +244,13 @@ body {
 
     }
 }
+
+@media screen and (max-width: 480px){
+  h1{
+    font-size: 20px;
+    justify-content: center;
+  }
+}    
   }
 
 .proyectos{
@@ -376,6 +431,12 @@ body {
         }
       }
     }
+    @media screen and (max-width: 480px){
+      h1{
+        font-size: 20px;
+        justify-content: center;
+      }
+    }
 }
 
 .diplomas{
@@ -442,6 +503,12 @@ body {
       @include galery(1.5);
     }
   }
+  @media screen and (max-width: 480px){
+    h1{
+      font-size: 20px;
+      justify-content: center;
+    }
+  }
 }
 .contacto{
     @include parallax-background("https://media1.giphy.com/media/5zheTUHRhWkiKylaZ9/giphy.gif?cid=ecf05e478hty8iqq5oo29rb1dmmiwbb95tna966lpq080270&rid=giphy.gif&ct=g");
@@ -495,6 +562,15 @@ body {
 #link{
   width: 300px
 }
+@media screen and (max-width: 480px){
+  h1{
+    font-size: 20px;
+    justify-content: center;
+  }
+  socialm{
+    width: 40px;
+  }
+}
 }
 
 .personalinfo{
@@ -536,5 +612,15 @@ body {
       border-left: 0;
       border-right: 0;
       background-color: $scrollbar-color-start;
+    }
+    @media screen and (max-width: 480px){
+      h1{
+        font-size: 20px;
+        justify-content: center;
+      }
+      .spotify{
+        width: 100px;
+        justify-content: center;
+      }
     }
 }

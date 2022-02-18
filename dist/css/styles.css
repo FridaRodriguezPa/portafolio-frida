@@ -6,6 +6,14 @@
 /* Main variables */
 /*Proyectos*/
 /*Scrollbar*/
+@media screen and (max-width: 480px) {
+  * html {
+    font-size: 50px; }
+  * img {
+    width: 200px; }
+  * h1 {
+    font-size: 40px; } }
+
 html,
 body {
   margin: 0;
@@ -52,6 +60,10 @@ body {
     font-family: "Inconsolata", monospace; }
   .nav_link:hover {
     text-decoration: none; }
+  @media screen and (max-width: 480px) {
+    .nav a li {
+      font-size: 20px;
+      justify-content: center; } }
 
 .titulo {
   background: url("https://media1.giphy.com/media/Xx1KwaTNBliH6/giphy.gif?cid=ecf05e47dorzb7gjxfbmozc8bt4wo4894gfi0h7tizk1gtel&rid=giphy.gif&ct=g") no-repeat center center fixed;
@@ -74,6 +86,9 @@ body {
     text-align: center;
     transform: translateZ(-2px);
     text-shadow: 4px 4px #000000; }
+  @media screen and (max-width: 480px) {
+    .titulo h1 {
+      font-size: 100px; } }
 
 .descripcion img {
   width: 400px;
@@ -101,6 +116,15 @@ body {
     margin-left: 0%;
     width: 100%; } }
 
+@media screen and (max-width: 480px) {
+  .descripcion img {
+    width: 300px;
+    align-items: center;
+    left: 0px; }
+  .descripcion P {
+    font-size: 15px;
+    margin: 10px; } }
+
 .formacion {
   background: url("https://media4.giphy.com/media/l3vRmn9fXmoslrsDC/giphy.gif?cid=ecf05e47txwslv0468yrvkp6yho6tk3g1odlfym2g1gqghkh&rid=giphy.gif&ct=g") no-repeat center center fixed;
   background-size: cover;
@@ -124,7 +148,15 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 30px; }
+    margin: 30px;
+    padding: 20px;
+    align-items: center; }
+    @media (max-width: 1000px) {
+      .formacion .tarjetas::before {
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        margin-left: 0; } }
     .formacion .tarjetas .header {
       border-radius: 13px;
       background-color: #5151ff;
@@ -164,6 +196,10 @@ body {
         width: 20px;
         margin: 0;
         padding: 0; }
+  @media screen and (max-width: 480px) {
+    .formacion h1 {
+      font-size: 20px;
+      justify-content: center; } }
 
 .proyectos {
   background: url("https://media1.giphy.com/media/JCwpJ463XondnALQVo/giphy.gif?cid=ecf05e47rg86h7qjplvbj875d1i4euhynhx8pse09575a328&rid=giphy.gif&ct=g") no-repeat center center fixed;
@@ -308,6 +344,10 @@ body {
   @media (max-width: 760px) and (max-width: 440px) {
     .proyectos .timeline::before {
       display: none; } }
+  @media screen and (max-width: 480px) {
+    .proyectos h1 {
+      font-size: 20px;
+      justify-content: center; } }
 
 .diplomas {
   background: url("https://media0.giphy.com/media/3ohzdUGwaysUzYgRKE/giphy.gif?cid=ecf05e470rmlpdw9noycp2jll9eovejj7el65eia2rltp4a3&rid=giphy.gif&ct=g") no-repeat center center fixed;
@@ -389,6 +429,10 @@ body {
       transform: scale(1.5);
       transition: 600ms transform ease-in-out;
       z-index: 1; }
+  @media screen and (max-width: 480px) {
+    .diplomas h1 {
+      font-size: 20px;
+      justify-content: center; } }
 
 .contacto {
   background: url("https://media1.giphy.com/media/5zheTUHRhWkiKylaZ9/giphy.gif?cid=ecf05e478hty8iqq5oo29rb1dmmiwbb95tna966lpq080270&rid=giphy.gif&ct=g") no-repeat center center fixed;
@@ -435,6 +479,12 @@ body {
     box-shadow: 4px 4px #000000; }
   .contacto #link {
     width: 300px; }
+  @media screen and (max-width: 480px) {
+    .contacto h1 {
+      font-size: 20px;
+      justify-content: center; }
+    .contacto socialm {
+      width: 40px; } }
 
 .personalinfo {
   background: url("https://media3.giphy.com/media/KxbHmvL3MGcctzlfdX/giphy.gif?cid=ecf05e47t7t054uxovj6sivmtl6ovhe1yho00xz899urnt5v&rid=giphy.gif&ct=g") no-repeat center center fixed;
@@ -473,3 +523,10 @@ body {
     border-left: 0;
     border-right: 0;
     background-color: #e8bbfa; }
+  @media screen and (max-width: 480px) {
+    .personalinfo h1 {
+      font-size: 20px;
+      justify-content: center; }
+    .personalinfo .spotify {
+      width: 100px;
+      justify-content: center; } }
