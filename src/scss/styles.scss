@@ -76,12 +76,37 @@ body {
   &_link:hover{
     text-decoration: none;
   }
-  @media screen and (max-width: 480px){
-    a li{
-      font-size: 20px;
+  @media all and (min-width: 600px) {
+    .nav {
       justify-content: center;
     }
+    .toggle {
+      flex: 1;
+      text-align: right;
+    }
+    .toggle {
+      order: 2;
+    }
   }
+  /* Desktop menu */
+  @media all and (min-width: 900px) {
+    .nav_link {
+      display: block;
+      width: auto;
+    }
+    .toggle {
+      display: none;
+    }
+    
+    .nav_link {
+      order: 1;
+    }
+    .nav li {
+      padding: 15px 10px;
+    }
+  }
+  
+
 }
 
 

@@ -41,7 +41,8 @@ body {
   padding: 2px;
   z-index: 2;
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  /* Desktop menu */ }
   .nav ul li {
     list-style-type: none;
     display: inline-block;
@@ -60,10 +61,24 @@ body {
     font-family: "Inconsolata", monospace; }
   .nav_link:hover {
     text-decoration: none; }
-  @media screen and (max-width: 480px) {
-    .nav a li {
-      font-size: 20px;
-      justify-content: center; } }
+  @media all and (min-width: 600px) {
+    .nav .nav {
+      justify-content: center; }
+    .nav .toggle {
+      flex: 1;
+      text-align: right; }
+    .nav .toggle {
+      order: 2; } }
+  @media all and (min-width: 900px) {
+    .nav .nav_link {
+      display: block;
+      width: auto; }
+    .nav .toggle {
+      display: none; }
+    .nav .nav_link {
+      order: 1; }
+    .nav .nav li {
+      padding: 15px 10px; } }
 
 .titulo {
   background: url("https://media1.giphy.com/media/Xx1KwaTNBliH6/giphy.gif?cid=ecf05e47dorzb7gjxfbmozc8bt4wo4894gfi0h7tizk1gtel&rid=giphy.gif&ct=g") no-repeat center center fixed;
